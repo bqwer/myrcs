@@ -1,0 +1,29 @@
+[core]
+; CYGWIN
+; editor = C:/cygwin/bin/vim.exe
+[diff]
+  tool = vimdiff
+[merge]
+  tool = vimdiff
+; [difftool "vimdiff"]
+; CYGWIN
+; cmd = C:/cygwin/bin/vim.exe -d \"$LOCAL\" \"$REMOTE\"
+[user]
+  name = bqwer
+  email = liventsev@gmail.com
+[credential]
+  helper = cache --timeout=3600
+[alias]
+  co = checkout
+  cm = commit
+  st = status
+  br = branch
+  u  = add -u
+  hist = log --pretty=format:\"%h %ad | %s%d [%an]\"
+  type = cat-file -t
+  dump = cat-file -p
+  bra = for-each-ref --format='%(committerdate) %09 %(authorname) %09 %(refname)'
+  graph = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+[push]
+  default = simple
+	followTags = true
